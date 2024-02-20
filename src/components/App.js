@@ -1,3 +1,6 @@
+import Header from "./Header";
+import PetList from "./Petlist";
+
 function App() {
 
   const pets = [
@@ -39,7 +42,10 @@ function App() {
   ]
 
   return (
-    <h1>Welcome to React!</h1>
+    <div className="app">
+        <Header/>
+        <PetList pets={pets}/>
+    </div>
   );
 }
 
