@@ -1,46 +1,52 @@
 {
   "pets": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Fido",
       "image": "./images/dog.jpeg",
       "animal_type": "Dog"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Kitty",
       "image": "./images/cat.png",
       "animal_type": "Cat"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Hammy",
       "image": "./images/hamster.jpeg",
       "animal_type": "Hamster"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Polly",
       "image": "./images/parrot.jpeg",
       "animal_type": "Bird"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Angel",
       "image": "./images/horse.jpeg",
       "animal_type": "Horse"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Fluffy",
       "image": "./images/guinea-pig.jpeg",
       "animal_type": "Guinea Pig"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Goldie",
       "image": "./images/fish.jpeg",
       "animal_type": "Fish"
+    },
+    {
+      "id": "fa95",
+      "name": "Clyde",
+      "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto/3346197-back-1",
+      "animal_type": "Bearded Dragon"
     }
   ]
 }

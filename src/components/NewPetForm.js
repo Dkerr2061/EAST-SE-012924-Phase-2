@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function NewPetForm({addPet}) {
 
@@ -9,6 +9,7 @@ function NewPetForm({addPet}) {
     animal_type: ""
   })
 
+
   function updateFormData(event){
     setFormData({...formData, [event.target.name]: event.target.value})
   }
@@ -16,8 +17,7 @@ function NewPetForm({addPet}) {
   function handleSubmit(event){
     event.preventDefault()
 
-    const newPet = {
-      id: uuid(),
+    const newPet = {   
       ...formData
     }
 
@@ -34,9 +34,9 @@ function NewPetForm({addPet}) {
     <div className="new-pet-form">
       <h2>New Pet</h2>
       <form onSubmit={handleSubmit}>
-        <input onChange={updateFormData} type="text" name="name" placeholder="Pet name" value={formData.name} />
-        <input onChange={updateFormData} type="text" name="image" placeholder="Image URL" value={formData.image} />
-        <input onChange={updateFormData} type="text" name="animal_type" placeholder="Animal type" value={formData.animal_type} />
+        <input onChange={updateFormData} type="text" name="name" placeholder="Pet name" value={formData.name} required/>
+        <input onChange={updateFormData} type="text" name="image" placeholder="Image URL" value={formData.image} required/>
+        <input onChange={updateFormData} type="text" name="animal_type" placeholder="Animal type" value={formData.animal_type} required/>
         <button type="submit">Add Pet</button>
       </form>
     </div>
