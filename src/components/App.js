@@ -1,7 +1,9 @@
 import Header from "./Header";
-import PetList from "./PetList";
 import { useState, useEffect } from "react";
-import NewPetForm from "./NewPetForm";
+import { Outlet } from "react-router-dom";
+import NavBar from "./NavBar";
+import PetList from "./PetList";
+// import NewPetForm from "./NewPetForm";
 
 function App(){
 
@@ -78,14 +80,12 @@ function App(){
 
     return (
       <div className="app">
-        {/* <nav className="navbar">
-          <a className={route === "/" ? "active" : ""} onClick={(event) => navigate(event, "/")} href="/">Home</a>
-          <a className={route === "/add_pet" ? "active" : ""} onClick={(event) => navigate(event, "/add_pet")} href="/add_pet">Add Pet</a>
-        </nav> */}
+        <NavBar/>
         <Header/>
-        <NewPetForm addPet={addPet}/>
-        <PetList pets={pets} deletePet={deletePet} updatePet={updatePet}/>
+        {/* <NewPetForm addPet={addPet}/> */}
+        {/* <PetList pets={pets} deletePet={deletePet} updatePet={updatePet}/> */}
         {/* {component} */}
+        <Outlet context={{pets: pets, addPet: addPet, deletePet: deletePet, updatePet: updatePet}}/>
       </div>
     );
 }

@@ -48,6 +48,13 @@
       "image": "./images/fish.jpeg",
       "animal_type": "Fish",
       "likes": 4
+    },
+    {
+      "id": "bf03",
+      "name": "Pedro",
+      "image": "https://m.media-amazon.com/images/I/61NOfTsL6lL._AC_SL1500_.jpg",
+      "animal_type": "Bearded Dragon",
+      "likes": 30
     }
   ]
 }
